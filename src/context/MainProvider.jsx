@@ -58,7 +58,8 @@ export default function MainProvider({ children }) {
     try {
       // setLoading(true);
 
-      const { data } = await axios.get(`${URL}/auth/login/success`, {
+      const { data } = await axios
+        .get(`${URL}/auth/login/success`, {
           withCredentials: true,
         })
         .catch((err) => {
@@ -66,9 +67,8 @@ export default function MainProvider({ children }) {
         });
 
       if (data.success === false) {
-        setLoading(false);
         setUser(null);
-        navigate('/login');
+        setLoading(false);
       } else {
         setUser(data.user.doc);
         setLoading(false);
@@ -95,9 +95,8 @@ export default function MainProvider({ children }) {
       });
 
     if (data.success === false) {
-      setLoading(false);
       setUser(null);
-      navigate('/login');
+      setLoading(false);
     } else {
       setUser(data.user);
       setLoading(false);
@@ -106,7 +105,7 @@ export default function MainProvider({ children }) {
 
   //user logout
   const logout = async () => {
-     await axios.get(`${URL}/auth/log`);
+    await axios.get(`${URL}/auth/log`);
     await axios.get(`${URL}/user/logout`, {
       withCredentials: 'include',
     });
@@ -114,11 +113,9 @@ export default function MainProvider({ children }) {
     setUser(null);
   };
 
-  useEffect(() => {
-    getUser();
-  }, []);
-
-
+  // useEffect(() => {
+  //   getUser();
+  // }, []);
 
   //refresh new every 10 minutes
   useEffect(() => {

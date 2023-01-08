@@ -51,7 +51,7 @@ export default function Register() {
     if (password !== confirmPassword) {
       alert('passwords do not match');
     } else {
-       await axios.post(`${URL}/user/register`, userData, {
+      await axios.post(`${URL}/user/register`, userData, {
         headers: {
           'Content-Type': 'application/json',
         },
@@ -128,7 +128,11 @@ export default function Register() {
                   </div>
                 </Grid>
                 <Grid item xs={12}>
-                  <Button variant="contained" fullWidth onClick={registerUser}>
+                  <Button
+                    variant="contained"
+                    fullWidth
+                    onClick={() => registerUser()}
+                  >
                     register
                   </Button>
                 </Grid>

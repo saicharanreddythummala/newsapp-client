@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import Landing from '../../components/landing/Landing';
 import { Routes, Route } from 'react-router-dom';
 import Login from '../login/Login';
@@ -8,7 +8,11 @@ import { MainContext } from '../../context/MainContext';
 import Protected from '../../components/protectedRoute/Protected';
 
 export default function Home() {
-  const { loading} = useContext(MainContext);
+  const { loading, getUser } = useContext(MainContext);
+
+  useEffect(() => {
+    getUser();
+  }, []);
 
   return (
     <>
@@ -16,7 +20,6 @@ export default function Home() {
         <Loader />
       ) : (
         <>
-          {' '}
           <Routes>
             <Route
               path="/"
