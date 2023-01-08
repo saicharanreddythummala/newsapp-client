@@ -29,6 +29,11 @@ You can do this by creating a free developer account at https://newsapi.org/. Ad
 
 user can either login using his own credentials or use SSO.
 
+### Register
+![image](https://user-images.githubusercontent.com/95035414/211212935-652de1fb-9406-4054-894f-90b39fb1e959.png)
+
+user can register and also upload image manually
+
 ### Landing page
 ![Screenshot 2023-01-08 183107](https://user-images.githubusercontent.com/95035414/211200946-bd7a79c1-9377-4a64-afcc-b4e8598b083c.jpg)
 
