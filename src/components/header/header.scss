@@ -1,0 +1,63 @@
+.header {
+  width: 100%;
+  height: 80px;
+  .container {
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+    .brand {
+      color: #002b6e;
+      font-size: 2rem;
+    }
+    .srch_bar {
+      position: relative;
+      svg {
+        cursor: pointer;
+      }
+      margin: 0 10rem;
+
+      .MuiFormControl-root {
+        width: 100%;
+      }
+      .show {
+        background-color: #ece8e8;
+        position: absolute;
+        border-radius: 0.2rem;
+        top: 100%;
+        width: 100%;
+        height: fit-content;
+        z-index: 1000;
+        padding: 1rem;
+        table {
+          width: 100%;
+        }
+      }
+      .hide {
+        display: none;
+      }
+    }
+    .user_opts {
+      .user {
+        #l_log {
+          font-size: 0.8rem;
+          margin: 0;
+          font-weight: 600;
+          color: #90949b;
+        }
+        .user_p {
+          align-items: center;
+          .MuiAvatar-root {
+            img {
+              width: 100% !important;
+              height: 100%;
+            }
+          }
+          p {
+            margin: 0 0.6rem;
+          }
+        }
+      }
+    }
+  }
+}

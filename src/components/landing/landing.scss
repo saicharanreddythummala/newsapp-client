@@ -1,0 +1,14 @@
+.landing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .headlines {
+    width: 60%;
+    height: 556px;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+  }
+}
+
+
